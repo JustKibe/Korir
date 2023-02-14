@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+    int day, is_raining;
+    printf("Enter the day (1=Sunday, 2=Monday, ..., 7=Saturday): ");
+    scanf("%d", &day);
+    printf("Is it raining? (0=no, 1=yes): ");
+    scanf("%d", &is_raining);
+    if (day == 1 && !is_raining) {
+        printf("Game on\n");
+    } else {
+        printf("No game today\n");
+    }
+    return 0;
+}
