@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <math.h>
+
+int main(){
+    float a, b, c;
+    float x1, x2;
+    float determinant;
+    
+    //Read the coefficients of the quadratic eguation
+    printf("Enter the values of a, b, and c:");
+    scanf("%f%f%f", &a, &b, &c);
+    
+    //Calculate the determinant
+    determinant = b*b-4*a*c;
+    
+    //Check if the equation has real solutions
+    if (determinant > 0){
+        //Calculate the two real solutions
+        x1 = (-b + sqrt(determinant)) / (2*a);
+        x2 = (-b - sqrt(determinant)) / (2*a);
+        
+        //Print the solutions
+        printf("The solutions are: %.2f and %.2f\n", x1, x2);
+    }else if(determinant==0){
+        //Calculate the only real solution
+        x1 = -b/(2*a);
+        
+        //Print the solution
+        printf ("The solution is: %.2f\n",x1);
+     } else {
+        //Print a message indicating that the equation has no real solutions
+        printf("The equation has no real solutions.\n");
+     }
+     
+     return 0;
+}     
